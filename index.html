@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de privacidad — Altímetro (msnm)</title>
-  <meta name="description" content="Política de privacidad de Altímetro, la app para medir la altura sobre el nivel del mar con GPS y barómetro.">
+  <title>Tatacode — Apps y políticas de privacidad</title>
+  <meta name="description" content="Sitio de Tatacode: apps publicadas y sus políticas de privacidad.">
   <meta name="theme-color" content="#04121A">
   <style>
     :root {
@@ -15,13 +15,9 @@
       --texto: #E9F7F8;
       --tenue: #A8C6C9;
       --acento: #3AE7C8;
-      --alerta: #FFB86B;
     }
-
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       min-height: 100vh;
@@ -34,280 +30,72 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-
-    .contenedor {
-      width: min(860px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 56px 0 72px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 42px;
-    }
-
-    .logo {
-      flex: 0 0 auto;
-      width: 74px;
-      height: 74px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #07202A, #0B2C36);
+    .contenedor { width: min(900px, calc(100% - 40px)); margin: 0 auto; padding: 56px 0 72px; }
+    header { margin-bottom: 44px; }
+    .marca { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--acento); font-weight: 700; margin: 0 0 4px; }
+    h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+    .lema { color: var(--tenue); margin: 10px 0 0; max-width: 620px; }
+    .rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .tarjeta {
+      display: block;
+      padding: 24px 24px 22px;
       border: 1px solid var(--borde);
+      border-radius: 18px;
+      background: var(--tarjeta);
+      text-decoration: none;
+      color: var(--texto);
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    .tarjeta:hover {
+      transform: translateY(-3px);
+      border-color: rgba(58, 231, 200, 0.45);
+      background: rgba(58, 231, 200, 0.06);
+    }
+    .tarjeta h2 { font-size: 1.2rem; margin: 0 0 6px; }
+    .tarjeta .paquete { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.82rem; color: var(--tenue); margin: 0 0 12px; }
+    .tarjeta p { margin: 0; color: var(--tenue); font-size: 0.95rem; }
+    .tarjeta .enlace { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--acento); font-weight: 600; font-size: 0.92rem; }
+    .proximamente {
+      padding: 24px;
+      border: 1px dashed var(--borde);
+      border-radius: 18px;
+      color: var(--tenue);
       display: grid;
       place-items: center;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      text-align: center;
+      min-height: 150px;
     }
-
-    .marca {
-      font-size: 0.74rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--acento);
-      font-weight: 700;
-      margin: 0 0 4px;
-    }
-
-    h1 {
-      font-size: clamp(1.7rem, 4.5vw, 2.35rem);
-      line-height: 1.15;
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
-
-    .fecha {
-      color: var(--tenue);
-      font-size: 0.92rem;
-      margin: 8px 0 0;
-    }
-
-    .resumen {
-      padding: 22px 24px;
-      border: 1px solid var(--borde);
-      border-left: 4px solid var(--acento);
-      border-radius: 14px;
-      background: var(--tarjeta);
-      margin-bottom: 38px;
-    }
-
-    .resumen p { margin: 0; color: var(--texto); }
-
-    section {
-      padding: 26px 26px 24px;
-      margin: 0 0 18px;
-      border: 1px solid var(--borde);
-      border-radius: 16px;
-      background: var(--tarjeta);
-    }
-
-    h2 {
-      font-size: 1.18rem;
-      margin: 0 0 12px;
-      letter-spacing: -0.01em;
-      display: flex;
-      gap: 10px;
-      align-items: baseline;
-    }
-
-    h2 .num {
-      color: var(--acento);
-      font-variant-numeric: tabular-nums;
-      font-size: 0.94rem;
-      font-weight: 700;
-    }
-
-    h3 {
-      font-size: 1rem;
-      margin: 18px 0 6px;
-      color: var(--acento);
-    }
-
-    p { margin: 0 0 12px; }
-
-    ul {
-      margin: 0 0 12px;
-      padding-left: 22px;
-    }
-
-    li { margin: 6px 0; }
-
-    a {
-      color: var(--acento);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(58, 231, 200, 0.35);
-      overflow-wrap: anywhere;
-    }
-
-    a:hover { border-bottom-color: var(--acento); }
-
-    strong { color: #FFFFFF; }
-
-    .aviso {
-      padding: 16px 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 184, 107, 0.35);
-      background: rgba(255, 184, 107, 0.08);
-      color: #FFE2C2;
-      font-size: 0.95rem;
-      margin: 16px 0 0;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding-top: 22px;
-      border-top: 1px solid var(--borde);
-      color: var(--tenue);
-      font-size: 0.88rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 24px;
-      justify-content: space-between;
-    }
-
-    footer a { border: 0; }
-
-    @media (max-width: 560px) {
-      .contenedor { padding-top: 34px; }
-      header { gap: 14px; }
-      .logo { width: 60px; height: 60px; border-radius: 16px; }
-      section { padding: 20px 18px; }
-    }
+    footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--borde); color: var(--tenue); font-size: 0.88rem; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+    footer a { color: var(--acento); text-decoration: none; }
+    @media (max-width: 560px) { .contenedor { padding-top: 34px; } }
   </style>
 </head>
 <body>
   <main class="contenedor">
     <header>
-      <div class="logo" aria-hidden="true">
-        <svg width="46" height="46" viewBox="0 0 108 108" role="img" aria-label="Montañas">
-          <path d="M60,34 L86,82 L34,82 Z" fill="#1E8F80"/>
-          <path d="M22,82 L48,30 L74,82 Z" fill="#3AE7C8"/>
-          <path d="M48,30 L56.5,49 L52.2,46.4 L48.6,50.6 L44.6,46.2 L40,49.6 Z" fill="#E9F7F8"/>
-          <path d="M14,82 L94,82 L94,86 L14,86 Z" fill="#0B2C36"/>
-          <path d="M14,83 L94,83 L94,84.4 L14,84.4 Z" fill="#B4E86A"/>
-        </svg>
-      </div>
-      <div>
-        <p class="marca">Altímetro — msnm</p>
-        <h1>Política de privacidad</h1>
-        <p class="fecha">Última actualización: 12 de noviembre de 2026</p>
-      </div>
+      <p class="marca">Tatacode</p>
+      <h1>Apps y políticas de privacidad</h1>
+      <p class="lema">Sitio público de Tatacode: aplicaciones publicadas y sus políticas
+      de privacidad. Cada app tiene su propia carpeta y su propia política.</p>
     </header>
 
-    <div class="resumen">
-      <p><strong>En corto:</strong> la medición se hace en tu teléfono y no se envía a
-      servidores propios. La única conexión a internet es para los anuncios de
-      Google AdMob. No hay cuentas, ni venta de datos, ni ubicación en segundo plano.</p>
+    <div class="rejilla">
+      <a class="tarjeta" href="/altigo/">
+        <h2>Altímetro — msnm</h2>
+        <p class="paquete">com.tatacode.altigo</p>
+        <p>Mide tu altura sobre el nivel del mar con GPS y barómetro. Funciona sin
+        conexión; solo los anuncios necesitan internet.</p>
+        <span class="enlace">Ver política de privacidad →</span>
+      </a>
+
+      <div class="proximamente">
+        Próximos proyectos aparecerán aquí, cada uno en su propia carpeta.
+      </div>
     </div>
 
-    <section>
-      <h2><span class="num">1</span> Qué hace la app</h2>
-      <p>Altímetro estima la altura sobre el nivel del mar combinando la señal del
-      GPS con el sensor de presión del teléfono. La medición se calcula
-      <strong>en el propio dispositivo</strong>.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">2</span> Datos que tratamos</h2>
-
-      <h3>Ubicación</h3>
-      <ul>
-        <li>La app solicita permiso de ubicación <strong>mientras está en uso</strong>
-        para leer la altitud y las coordenadas del GPS y para calibrar el barómetro.</li>
-        <li>Las coordenadas y la altura se usan en el teléfono para mostrar la
-        medición y guardar los puntos que tú decidas guardar.</li>
-        <li><strong>No enviamos tu ubicación a servidores propios.</strong> La app no
-        tiene cuentas, servidores ni backend.</li>
-        <li>Los puntos guardados permanecen en el almacenamiento local de la app
-        hasta que los borras o desinstalas la aplicación.</li>
-      </ul>
-
-      <h3>Sensores</h3>
-      <p>La presión barométrica y los datos del GPS se procesan localmente. No se
-      transmiten.</p>
-
-      <h3>Anuncios (Google AdMob)</h3>
-      <p>La app muestra un banner y, ocasionalmente, un anuncio a pantalla completa
-      mediante <strong>Google Mobile Ads (AdMob)</strong>. Para servir y medir
-      anuncios, el SDK de Google puede recopilar y tratar:</p>
-      <ul>
-        <li>identificadores del dispositivo, incluido el identificador de publicidad
-        (<em>Advertising ID</em>);</li>
-        <li>dirección IP y ubicación aproximada derivada de ella;</li>
-        <li>datos sobre la visualización e interacción con los anuncios;</li>
-        <li>información técnica y de diagnóstico del dispositivo y de la app.</li>
-      </ul>
-      <p>Este tratamiento lo realiza Google como proveedor independiente y se rige
-      por su política de privacidad:
-      <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.
-      Puedes consultar cómo usa Google los datos de las apps en
-      <a href="https://support.google.com/admob/answer/6128543" rel="noopener">support.google.com/admob/answer/6128543</a>.</p>
-      <p>Puedes restablecer o eliminar tu identificador de publicidad desde los
-      ajustes de Android (Google → Anuncios). La app <strong>no</strong> vende datos
-      personales.</p>
-
-      <h3>Permiso de internet</h3>
-      <p>La app solo usa internet para cargar anuncios. Sin conexión la medición
-      sigue funcionando, pero el banner no carga y no se muestran intersticiales.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">3</span> Datos que NO recopilamos</h2>
-      <ul>
-        <li>No creamos cuentas ni pedimos nombre, correo o teléfono.</li>
-        <li>No accedemos a contactos, fotos, micrófono, cámara ni archivos.</li>
-        <li>No usamos la ubicación en segundo plano.</li>
-        <li>No enviamos tu historial de puntos a ningún servidor.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span class="num">4</span> Conservación y eliminación</h2>
-      <ul>
-        <li>Los puntos guardados se almacenan solo en tu teléfono. Puedes eliminarlos
-        desde la pantalla de historial o borrando los datos de la app.</li>
-        <li>Al desinstalar la app se eliminan los datos locales.</li>
-        <li>No hay datos alojados en servidores del desarrollador que podamos eliminar.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2><span class="num">5</span> Menores</h2>
-      <p>La app no está dirigida a menores de 13 años y no recopila conscientemente
-      datos personales de menores.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">6</span> Consentimiento publicitario</h2>
-      <p>Si la app se distribuye en el Espacio Económico Europeo, Reino Unido o
-      Suiza, puede ser necesario mostrar un mensaje de consentimiento (Google UMP)
-      antes de solicitar anuncios personalizados. La versión publicada debe cumplir
-      la normativa aplicable en cada país; de lo contrario, limita la distribución a
-      las regiones donde no se exige.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">7</span> Seguridad</h2>
-      <p>La información se mantiene en el dispositivo y se apoya en el aislamiento de
-      almacenamiento de Android. Ninguna transmisión por internet es 100&nbsp;% segura,
-      pero la app no transmite tus mediciones.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">8</span> Cambios</h2>
-      <p>Podemos actualizar esta política para reflejar cambios en la app o en la
-      legislación. La fecha de la última actualización aparece al inicio.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">9</span> Contacto</h2>
-      <p>Para preguntas sobre privacidad:
-      <a href="mailto:tatacodev@gmail.com">tatacodev@gmail.com</a>.</p>
-    </section>
-
     <footer>
-      <span>Altímetro — msnm · <code>com.tatacode.altigo</code></span>
-      <span>© 2026 Altímetro — msnm</span>
+      <span>Contacto: <a href="mailto:tatacodev@gmail.com">tatacodev@gmail.com</a></span>
+      <span>© 2026 Tatacode</span>
     </footer>
   </main>
 </body>
